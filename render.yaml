@@ -1,0 +1,52 @@
+services:
+  - type: web
+    name: kyravo-discord-radio
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeploy: true
+    healthCheckPath: /healthz
+    disk:
+      name: kyravo-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DASHBOARD_HOST
+        value: 0.0.0.0
+      - key: CONFIG_PATH
+        value: /var/data/channels.json
+      - key: CONFIG_BACKUP_DIR
+        value: /var/data
+      - key: MUSIC_DIRS
+        value: /var/data/music
+      - key: YTDLP_PATH
+        value: yt-dlp
+      - key: DASHBOARD_KEY
+        sync: false
+      - key: DISCORD_CLIENT_ID_MAIN
+        sync: false
+      - key: DISCORD_TOKEN_MAIN
+        sync: false
+      - key: DISCORD_CLIENT_ID_RADIO2
+        sync: false
+      - key: DISCORD_TOKEN_RADIO2
+        sync: false
+      - key: DISCORD_CLIENT_ID_RADIO3
+        sync: false
+      - key: DISCORD_TOKEN_RADIO3
+        sync: false
+      - key: DISCORD_CLIENT_ID_RADIO4
+        sync: false
+      - key: DISCORD_TOKEN_RADIO4
+        sync: false
+      - key: DISCORD_CLIENT_ID_RADIO5
+        sync: false
+      - key: DISCORD_TOKEN_RADIO5
+        sync: false
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
