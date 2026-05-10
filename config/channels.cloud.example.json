@@ -1,0 +1,47 @@
+{
+  "bots": [
+    {
+      "id": "main",
+      "name": "Kyravo Bot",
+      "tokenEnv": "DISCORD_TOKEN_MAIN",
+      "clientIdEnv": "DISCORD_CLIENT_ID_MAIN"
+    },
+    {
+      "id": "radio2",
+      "name": "Kyravo Radio 2",
+      "tokenEnv": "DISCORD_TOKEN_RADIO2",
+      "clientIdEnv": "DISCORD_CLIENT_ID_RADIO2"
+    },
+    {
+      "id": "radio3",
+      "name": "Kyravo Radio 3",
+      "tokenEnv": "DISCORD_TOKEN_RADIO3",
+      "clientIdEnv": "DISCORD_CLIENT_ID_RADIO3"
+    },
+    {
+      "id": "radio4",
+      "name": "Kyravo Radio 4",
+      "tokenEnv": "DISCORD_TOKEN_RADIO4",
+      "clientIdEnv": "DISCORD_CLIENT_ID_RADIO4"
+    },
+    {
+      "id": "radio5",
+      "name": "Kyravo Radio 5",
+      "tokenEnv": "DISCORD_TOKEN_RADIO5",
+      "clientIdEnv": "DISCORD_CLIENT_ID_RADIO5"
+    }
+  ],
+  "channels": [
+    {
+      "id": "main-radio",
+      "name": "Kyravo",
+      "guildId": "1101527394730389626",
+      "voiceChannelId": "1101796212509777920",
+      "botId": "main",
+      "enabled": true,
+      "volume": 0.55,
+      "stayWhenEmpty": false,
+      "sources": []
+    }
+  ]
+}

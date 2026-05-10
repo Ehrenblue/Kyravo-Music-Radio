@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050608">
+    <title>Kyravo Radio Bot</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="side-rail">
+        <div class="brand">
+          <span class="brand-mark">K</span>
+          <div>
+            <p class="eyebrow">Kyravo</p>
+            <h1>Radio Control</h1>
+          </div>
+        </div>
+
+        <div class="keybox">
+          <label for="key">Dashboard-Key</label>
+          <input id="key" type="password" autocomplete="current-password" placeholder="Key eingeben">
+        </div>
+
+        <div class="command-strip" aria-label="Discord Befehle">
+          <span>/play</span>
+          <span>/stop</span>
+          <span>/status</span>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Live Dashboard</p>
+            <h2>Discord Music Network</h2>
+          </div>
+          <div class="hero-actions">
+            <button id="reload" type="button" class="ghost-button">Aktualisieren</button>
+            <button id="save" type="button" class="primary">Speichern</button>
+          </div>
+        </header>
+
+        <span id="notice" role="status"></span>
+        <section id="stats" class="stats" aria-label="Status"></section>
+
+        <section class="content-grid">
+          <aside class="panel bot-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Bot Pool</p>
+                <h2>Bots</h2>
+              </div>
+            </div>
+            <div id="bots" class="stack"></div>
+          </aside>
+
+          <section class="panel channels-panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Routing</p>
+                <h2>Voice-Channels</h2>
+              </div>
+              <button id="addChannel" type="button" class="accent-button">Channel hinzufügen</button>
+            </div>
+            <div id="channels" class="channels"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
